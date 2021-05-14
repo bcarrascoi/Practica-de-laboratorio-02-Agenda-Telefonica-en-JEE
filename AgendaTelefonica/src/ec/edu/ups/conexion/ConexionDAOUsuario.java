@@ -13,13 +13,14 @@ public class ConexionDAOUsuario extends ConexionGenericaDAOUsuario<Usuario, Stri
 	public void createTable() {
 		conexion.update("DROP TABLE IF EXISTS Usuario");
 		conexion.update("CREATE TABLE Usuario (usuario_codigo int not null, cedula varchar(10) NOT NULL, nombre varchar(255),apellido varchar(255), correo varchar(255), contrasena varchar(255) , PRIMARY KEY (usuario_codigo))");	
-	}
+		}
 	
 	@Override
 	public void create(Usuario usuario) {
-		conexion.update("INSERT Usuario VALUES ("+usuario.getUsuario_codigo()+ ", '"+ usuario.getCedula() + ", '" + usuario.getNombre() + "', '" 
-				+ usuario.getApellido() + "', '" + usuario.getCorreo() + "', '"+ usuario.getContrasena() + "')");
+		conexion.update("INSERT Usuario VALUES (" + usuario.getUsuario_codigo()+ ", '" + usuario.getCedula() + "', '"
+				+ usuario.getNombre() + "', '" + usuario.getApellido() + "', '" + usuario.getCorreo() + "', '" + usuario.getContrasena() + "')");
 	}
+	
 	@Override
 	public Usuario read(String cedula) {
 		Usuario usuario = null;

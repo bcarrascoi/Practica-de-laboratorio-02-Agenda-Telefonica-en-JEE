@@ -18,15 +18,19 @@
 			<td><strong>Numero</strong></td>
 			<td><strong>Tipo</strong></td>
 			<td><strong>Operadora</strong></td>
+			<td><strong>Cedula</strong></td>
+			<td><strong>Nombre</strong></td>
 		</tr>
 		<c:forEach var="t" items="${lista}">
 			<tr>
 				<td>${t.codigo}</td>
-				<td>${t.numero}</td>
+				<td>${t.numeroTel}</td>
 				<td>${t.tipo}</td>
 				<td>${t.operadora}</td>
+				
 			</tr>
 		</c:forEach>
+		
 	</table>
 	<a href="/AgendaTelefonica/index.html">Regresar al index</a>
 

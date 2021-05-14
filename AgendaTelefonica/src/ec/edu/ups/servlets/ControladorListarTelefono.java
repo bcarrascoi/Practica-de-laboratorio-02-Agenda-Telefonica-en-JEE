@@ -19,7 +19,7 @@ public class ControladorListarTelefono extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private TelefonoDAO telefonoDAO;
 	private List<Telefono> listaTelefono;
-	
+
     public ControladorListarTelefono() {
     	telefonoDAO = PatronDAO.getPatronDAO().getTelefonoDAO();
     }
@@ -28,8 +28,9 @@ public class ControladorListarTelefono extends HttpServlet {
 		String url = null;
 		try {
 			listaTelefono = telefonoDAO.find();
+			
 			System.out.println("LISTA TELEFONO: " + listaTelefono.size());
-			request.setAttribute("telefonos", listaTelefono);
+			request.setAttribute("telefono", listaTelefono);
 			url= "/JSPs/listar_telefono.jsp";
 		}catch(Exception e) {
 			url = "/JSPs/error.jsp";

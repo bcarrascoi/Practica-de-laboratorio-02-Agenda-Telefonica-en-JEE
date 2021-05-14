@@ -2,31 +2,37 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> GESTION TELEFONO </title>
+<title>GESTION TELEFONO</title>
 </head>
 <body>
-	<h1> CREAR TELEFONO </h1>
-	<form action="/AgendaTelefonica/ControladorCrearTelefono" method="post">
-		
-		<label for="codigo">Codigo: </label>
-		<input type="text" name="codigo" placeholder="ingrese el codigo..."/>
+	<h1>CREAR TELEFONO</h1>
+	<form action="/AgendaTelefonica/ControladorCrearTelefono" method="post" >
+
+	<td>
+		<label for="codigo">Codigo: </label> 
+		<input type="text" name="codigo" placeholder="ingrese el codigo..." /> 
+		<br/> 
+		<label for="numeroTel">Numero Telefono: </label> 
+		<input type="text" name="numeroTel" placeholder="ingrese el numero..." /> 
+		<br/> 
+		<label for="tipo">Tipo: </label> 
+		<input type="text" name="tipo" placeholder="ingrese el tipo..." /> 
+		<br />
+		<label for="operadora">Operadora: </label> 
+		<input type="text" name="operadora" placeholder="ingrese la operadora..." /> 
+		<br /> 
+		</td>
+		<label for="cedula">Cedula: </label>
+		<input type="text" name="cedula" value="" placeholder="ingrese la cedula..."/>
 		<br/>
 		
-		<label for="numero">Numero: </label>
-		<input type="text" name="numero" placeholder="ingrese el numero..."/>
+		<label for="nombre">Nombre: </label>
+		<input type="text" name="nombre" placeholder="ingrese el nombre..."/>			
 		<br/>
-		
-		<label for="tipo">Tipo: </label>
-		<input type="text" name="tipo" placeholder="ingrese el tipo..."/>			
-		<br/>
-		
-		<label for="operadora">Operadora: </label>
-		<input type="text" name="operadora" placeholder="ingrese la operadora..."/>
-		<br/>
-		
-		<input type="submit" value="Aceptar"/>
-		<input type="reset" value="Cancelar"/>
+
+		<input type="submit" value="Crear" /> <input type="reset" value="Cancelar" />
 	</form>
-	
+
+
 </body>
 </html>

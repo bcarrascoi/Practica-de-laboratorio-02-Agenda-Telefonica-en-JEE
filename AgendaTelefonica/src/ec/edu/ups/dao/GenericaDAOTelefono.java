@@ -8,7 +8,7 @@ public interface GenericaDAOTelefono <T, ID> {
 
 	public void create(T entity);
 
-	public T read(ID id);
+	public T read(Integer id);
 
 	public void update(T entity);
 

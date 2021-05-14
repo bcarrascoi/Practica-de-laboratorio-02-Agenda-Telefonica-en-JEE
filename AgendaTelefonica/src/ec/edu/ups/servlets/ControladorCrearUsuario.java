@@ -23,27 +23,7 @@ public class ControladorCrearUsuario extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
-/**
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
-		UsuarioDAO usuarioDAO = PatronDAO.getPatronDAO().getUsuarioDAO();
-		String url = null;
-		try {
-			Usuario usuario = new Usuario( 
-					request.getParameter(Integer.valueOf("usuario_codigo")),
-					request.getParameter("cedula"),
-					request.getParameter("nombre"),
-					request.getParameter("apellido"),
-					request.getParameter("correo"),
-					request.getParameter("contrasena"));
-			usuarioDAO.create(usuario);
-			url= "/index.html";
-		}catch(Exception e) {
-			url= "/JSPs/error.jsp";
-		}
-		getServletContext().getRequestDispatcher(url).forward(request, response);
-	}
-*/
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
