@@ -31,10 +31,10 @@ public class ControladorCrearTelefono extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 	}
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 //int codigo= telefonoDao.contadorTelefono()+1;//+1;
 		String url = null;
 		String cedula = request.getParameter("cedula");
@@ -46,16 +46,20 @@ public class ControladorCrearTelefono extends HttpServlet {
 			telefono.setNumeroTel(request.getParameter("numeroTel"));
 			telefono.setTipo(request.getParameter("tipo"));
 			telefono.setOperadora(request.getParameter("operadora"));
-		
-				
-			//Telefono telefono=new Telefono(Integer.valueOf(request.getParameter("codigo")), request.getParameter("numeroTel"), request.getParameter("tipo"), request.getParameter("operadora"), usuario.getUsuario_codigo());
-				telefonoDAO.create(telefono);
-				response.sendRedirect("/index.html");
-				System.out.println("Guardar" + telefono);
-			
-		}catch(Exception e ) {
-			url= "/JSPs/error.jsp";
+
+			// Telefono telefono=new
+			// Telefono(Integer.valueOf(request.getParameter("codigo")),
+			// request.getParameter("numeroTel"), request.getParameter("tipo"),
+			// request.getParameter("operadora"), usuario.getUsuario_codigo());
+			telefonoDAO.create(telefono);
+			url = "/index.html";
+			// response.sendRedirect("/index.html");
+			System.out.println("Guardar" + telefono);
+
+		} catch (Exception e) {
+			url = "/JSPs/error.jsp";
 		}
-}
+		getServletContext().getRequestDispatcher(url).forward(request, response);
+	}
 
 }

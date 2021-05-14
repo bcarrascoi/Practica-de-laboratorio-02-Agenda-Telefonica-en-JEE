@@ -33,7 +33,7 @@ public class ControladorEliminarUsuario extends HttpServlet {
 		try {
 			usuario.setCedula(request.getParameter("cedula"));
 			usuarioDAO.delete(usuario);
-			url= "/index.html";
+			url= "/loginAdministrador.html";
 		}catch(Exception e) {
 			url = "/JSPs/error.jsp";
 		}

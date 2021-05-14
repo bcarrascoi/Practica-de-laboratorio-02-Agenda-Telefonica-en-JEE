@@ -19,7 +19,7 @@
 	<p>Correo: ${u.correo}</p>
 	<p>Contrasena: ${u.contrasena}</p>
 	
-	<a href="/AgendaTelefonica/index.html">Regresar al index</a>
+	<a href="/AgendaTelefonica/loginAdministrador.html">Regresar al index</a>
 	
 </body>
 </html>

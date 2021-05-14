@@ -42,7 +42,7 @@ public class ControladorLogin extends HttpServlet {
 			
 			session.setAttribute("usuario", usuario);
 			session.setAttribute("clave", clave);
-			RequestDispatcher dispacher = getServletContext().getRequestDispatcher("/Calculadora.html");
+			RequestDispatcher dispacher = getServletContext().getRequestDispatcher("/loginAdministrador.html");
 			dispacher.forward(request, response);
 			
 		}else {

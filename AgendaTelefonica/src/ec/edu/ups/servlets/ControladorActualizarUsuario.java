@@ -38,7 +38,7 @@ public class ControladorActualizarUsuario extends HttpServlet {
 			usuario.setCorreo(request.getParameter("correo"));
 			usuario.setContrasena(request.getParameter("contrasena"));
 			usuarioDAO.update(usuario);
-			url="/index.html";
+			url="/loginAdministrador.html";
 		}catch(Exception e) {
 			url = "/JSPs/error.jsp";
 		}

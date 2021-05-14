@@ -36,7 +36,7 @@ public class ControladorCrearUsuario extends HttpServlet {
 					usuario.setCorreo(request.getParameter("correo"));
 					usuario.setContrasena(request.getParameter("contrasena"));
 			usuarioDAO.create(usuario);
-			url= "/index.html";
+			url= "/loginAdministrador.html";
 		}catch(Exception e) {
 			url= "/JSPs/error.jsp";
 		}

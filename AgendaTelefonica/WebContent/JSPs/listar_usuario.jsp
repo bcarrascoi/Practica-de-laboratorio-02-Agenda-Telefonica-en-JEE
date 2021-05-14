@@ -34,7 +34,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="/AgendaTelefonica/index.html">Regresar al index</a>
+	<a href="/AgendaTelefonica/loginAdministrador.html">Regresar al index</a>
 
 </body>
 </html>
