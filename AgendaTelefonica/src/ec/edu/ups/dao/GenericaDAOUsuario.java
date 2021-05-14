@@ -2,7 +2,7 @@ package ec.edu.ups.dao;
 
 import java.util.List;
 
-public interface GenericaDAOUsuario <T, Cedula> {
+public interface GenericaDAOUsuario <T, ID> {
 
 	public void createTable();
 	

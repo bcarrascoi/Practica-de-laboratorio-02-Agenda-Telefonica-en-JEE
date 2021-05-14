@@ -12,24 +12,21 @@ public class ConexionDAOUsuario extends ConexionGenericaDAOUsuario<Usuario, Stri
 	@Override
 	public void createTable() {
 		conexion.update("DROP TABLE IF EXISTS Usuario");
-		conexion.update("CREATE TABLE Usuario (" + "CEDULA NOT NULL, " + "NOMBRE VARCHAR(255), APELLIDO VARCHAR(255)" 
-				+ "CORREO VARCHAR(255), CONTRASENA(255)"
-				+ ", PRIMARY KEY (CEDULA))");
+		conexion.update("CREATE TABLE Usuario (usuario_codigo int not null, cedula varchar(10) NOT NULL, nombre varchar(255),apellido varchar(255), correo varchar(255), contrasena varchar(255) , PRIMARY KEY (usuario_codigo))");	
 	}
-
+	
 	@Override
 	public void create(Usuario usuario) {
-		conexion.update("INSERT Usuario VALUES (" + usuario.getCedula() + "', '" + usuario.getNombre() + "', '"
-				+ usuario.getApellido() + "', '" + usuario.getCorreo() + "', '" + usuario.getContrasena() + "')");
+		conexion.update("INSERT Usuario VALUES ("+usuario.getUsuario_codigo()+ ", '"+ usuario.getCedula() + ", '" + usuario.getNombre() + "', '" 
+				+ usuario.getApellido() + "', '" + usuario.getCorreo() + "', '"+ usuario.getContrasena() + "')");
 	}
-
 	@Override
 	public Usuario read(String cedula) {
 		Usuario usuario = null;
 		ResultSet rs = conexion.query("SELECT * FROM Usuario WHERE cedula=" + cedula);
 		try {
 			if (rs != null && rs.next()) {
-				usuario = new Usuario(rs.getString("cedula"), rs.getString("nombre"), rs.getString("apellido"),
+				usuario = new Usuario(rs.getInt("usuario_codigo"),rs.getString("cedula"), rs.getString("nombre"), rs.getString("apellido"),
 						rs.getString("correo"), rs.getString("contrasena"));
 			}
 		} catch (SQLException e) {
@@ -40,14 +37,14 @@ public class ConexionDAOUsuario extends ConexionGenericaDAOUsuario<Usuario, Stri
 
 	@Override
 	public void update(Usuario usuario) {
-		conexion.update("UPDATE Usuario SET nombre = '" + usuario.getNombre()
+		conexion.update("UPDATE Usuario SET usuario_codigo= '"+ usuario.getUsuario_codigo() + "', nombre = '" + usuario.getNombre()
 				+ "', apellido = '" + usuario.getApellido() + "', correo = '" + usuario.getCorreo()
 				+ "', contrasena = '" + usuario.getContrasena() + "' WHERE cedula = " + usuario.getCedula());
 	}
 
 	@Override
 	public void delete(Usuario usuario) {
-		conexion.update("DELETE FROM Persona WHERE cedula = " + usuario.getCedula());
+		conexion.update("DELETE FROM Usuario WHERE cedula = " + usuario.getCedula());
 	}
 
 	@Override
@@ -56,7 +53,7 @@ public class ConexionDAOUsuario extends ConexionGenericaDAOUsuario<Usuario, Stri
 		ResultSet rs = conexion.query("SELECT * FROM Usuario");
 		try {
 			while (rs.next()) {
-				list.add(new Usuario(rs.getString("cedula"), rs.getString("nombre"),
+				list.add(new Usuario(rs.getInt("usuario_codigo"),rs.getString("cedula"), rs.getString("nombre"),
 						rs.getString("apellido"), rs.getString("correo"), rs.getString("contrasena")));
 			}
 

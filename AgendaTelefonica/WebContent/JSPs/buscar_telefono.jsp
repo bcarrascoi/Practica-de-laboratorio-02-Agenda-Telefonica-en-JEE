@@ -6,18 +6,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Usuario Encontrado</title>
+<title>Telefono Encontrado</title>
 </head>
 <body>
-	<c:set var="u" scope="request" value="${usuario}" />
-	<h1>USUARIO ENCONTRADO</h1>
-			
-	<p>ID: ${u.usuario_codigo}</p>
-	<p>Cedula: ${u.cedula}</p>
-	<p>Nombre: ${u.nombre}</p>
-	<p>Apellido: ${u.apellido}</p>
-	<p>Correo: ${u.correo}</p>
-	<p>Contrasena: ${u.contrasena}</p>
+	<c:set var="t" scope="request" value="${telefono}" />
+	<h1>TELEFONO ENCONTRADO</h1>		
+		
+	<p>Codigo: ${t.codigo}</p>
+	<p>Numero: ${t.numero}</p>
+	<p>Tipo: ${t.tipo}</p>
+	<p>Operadora: ${t.operadora}</p>
 	
 	<a href="/AgendaTelefonica/index.html">Regresar al index</a>
 	

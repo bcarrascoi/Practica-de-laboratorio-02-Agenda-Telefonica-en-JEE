@@ -5,7 +5,8 @@ import java.io.Serializable;
 public class Usuario implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-
+	
+	private int usuario_codigo;
 	private String cedula;
 	private String nombre;
 	private String apellido;
@@ -16,13 +17,22 @@ public class Usuario implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Usuario(String cedula, String nombre, String apellido, String correo, String contrasena) {
+	public Usuario(int usuario_codigo, String cedula, String nombre, String apellido, String correo, String contrasena) {
+		this.setUsuario_codigo(usuario_codigo);
 		this.setCedula(cedula);
 		this.setNombre(nombre);
 		this.setApellido(apellido);
 		this.setCorreo(correo);
 		this.setContrasena(contrasena);
 	}
+
+	public int getUsuario_codigo() {
+		return usuario_codigo;
+	}
+	public void setUsuario_codigo(int usuario_codigo) {
+		this.usuario_codigo = usuario_codigo;
+	}
+
 	public String getCedula() {
 		return cedula;
 	}

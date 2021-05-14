@@ -4,4 +4,5 @@ import ec.edu.ups.pojo.Usuario;
 
 public interface UsuarioDAO extends GenericaDAOTelefono<Usuario, String>{
 
+
 }

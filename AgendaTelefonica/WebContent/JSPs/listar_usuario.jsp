@@ -9,12 +9,14 @@
 <title>USUARIO ENCONTRADO</title>
 </head>
 <body>
-	<c:set var="lista" scope="request" value="${usuario}" />
+	<c:set var="lista" scope="request" value="${usuarios}" />
 	<h1>Lista de usuarios </h1>
 
 	<table>
 		<tr>
-			<td><strong>Id</strong></td>
+		<td><strong>Codigo</strong></td>
+		
+			<td><strong>ID</strong></td>
 			<td><strong>Cedula</strong></td>
 			<td><strong>Nombre</strong></td>
 			<td><strong>Apellido</strong></td>
@@ -23,7 +25,7 @@
 		</tr>
 		<c:forEach var="u" items="${lista}">
 			<tr>
-				<td>${u.id}</td>
+			<td>${u.usuario_codigo}</td>
 				<td>${u.cedula}</td>
 				<td>${u.nombre}</td>
 				<td>${u.apellido}</td>

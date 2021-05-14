@@ -31,6 +31,7 @@ public class ControladorActualizarUsuario extends HttpServlet {
 		String url = null;
 		
 		try {
+			usuario.setUsuario_codigo(Integer.valueOf(request.getParameter("usuario_codigo")));
 			usuario.setCedula(request.getParameter("cedula"));
 			usuario.setNombre(request.getParameter("nombre"));
 			usuario.setApellido(request.getParameter("apellido"));

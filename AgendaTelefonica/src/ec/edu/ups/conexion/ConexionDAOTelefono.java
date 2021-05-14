@@ -13,11 +13,9 @@ public class ConexionDAOTelefono extends ConexionGenericaDAOTelefono<Telefono, I
 	@Override
 	public void createTable() {
 		conexion.update("DROP TABLE IF EXISTS Telefono");
-		conexion.update("CREATE TABLE Telefono (" + "CODIGO INT NOT NULL," + "NUMERO VARCHAR(10),"
-		+ "TIPO VARCHAR (255), OPERADORA VARCHAR(255) " + ",PRIMARY KEY(CODIGO))");
-		
+		conexion.update("CREATE TABLE Telefono (codigo INT NOT NULL , numero VARCHAR(10), tipo VARCHAR (255), operadora VARCHAR(255) ,PRIMARY KEY(codigo))");
 	}
-
+	
 	@Override
 	public void create(Telefono telefono) {
 		conexion.update("INSERT Telefono VALUES (" + telefono.getCodigo()+ ", '" + telefono.getNumeroTel() + "', '"

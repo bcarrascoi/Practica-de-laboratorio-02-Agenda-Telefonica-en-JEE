@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class Conexion {
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-	private static final String URL = "jdbc:mysql://localhost:3306/agendaT"+"?useTimezone=true&serverTimezone=UTC";
+	private static final String URL = "jdbc:mysql://localhost:3306/agenda_bd"+"?useTimezone=true&serverTimezone=UTC";
 	private static final String USER = "root";
 	private static final String PASS = "cuenca";
 	private static Conexion jdbc = null;	
@@ -51,8 +51,6 @@ public class Conexion {
 	}
 	
 	protected static Conexion getJDBC1() {
-		// creación de la conexión a la base de datos solo si no ha sido creada patrón
-		// de diseño singleton
 		if (jdbc == null) {
 			jdbc = new Conexion();
 		}
