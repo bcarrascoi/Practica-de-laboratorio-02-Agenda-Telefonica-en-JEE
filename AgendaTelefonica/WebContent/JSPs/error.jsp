@@ -8,8 +8,8 @@
 <title>Java Beans Error</title>
 </head>
 <body>
-	<h1>Hubo un error</h1>
-	<a href="/AgendaTelefonica/index.html">Regresar al index</a>
+	<h1>Ocurrió un Error </h1>
+	<a href="/AgendaTelefonica/usuario_menu.html"> Regresar al Menú Usuario</a>
 </body>
 </html>
 

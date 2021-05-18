@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ec.edu.ups.dao.PatronDAO;
-import ec.edu.ups.dao.TelefonoDAO;
+import ec.edu.ups.dao.DAOTelefono;
 import ec.edu.ups.pojo.Telefono;
 
 @WebServlet("/ControladorEliminarTelefono")
 public class ControladorEliminarTelefono extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private TelefonoDAO telefonoDAO; 
+    private DAOTelefono telefonoDAO; 
     private Telefono telefono;
    
     public ControladorEliminarTelefono() {
@@ -33,7 +33,7 @@ public class ControladorEliminarTelefono extends HttpServlet {
 	try {
 		telefono.setCodigo(Integer.valueOf(request.getParameter("codigo")));
 		telefonoDAO.delete(telefono);
-		url = "/index.html";
+		url = "/usuario_menu.html";
 	}catch(Exception e) {
 		url = "/JSPs/error.jsp";
 	}

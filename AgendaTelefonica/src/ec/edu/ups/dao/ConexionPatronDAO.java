@@ -12,12 +12,12 @@ public class ConexionPatronDAO extends PatronDAO {
 	}
 	
 	@Override
-	public UsuarioDAO getUsuarioDAO() {
+	public DAOUsuario getUsuarioDAO() {
 		return new ConexionDAOUsuario();
 	}
 	
 	@Override
-	public TelefonoDAO getTelefonoDAO() {
+	public DAOTelefono getTelefonoDAO() {
 		return new ConexionDAOTelefono();
 	}
 }

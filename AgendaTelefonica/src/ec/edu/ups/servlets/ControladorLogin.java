@@ -1,25 +1,26 @@
 package ec.edu.ups.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
+import ec.edu.ups.dao.DAOUsuario;
+import ec.edu.ups.dao.PatronDAO;
+import ec.edu.ups.pojo.Usuario;
 
 /**
  * Servlet implementation class ControladorLogin
  */
 @WebServlet("/ControladorLogin")
 public class ControladorLogin extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+	private static final long serialVersionUID = 1L;	
     public ControladorLogin() {
-        super();
-        // TODO Auto-generated constructor stub
+    
     }
 
 	/**
@@ -33,22 +34,39 @@ public class ControladorLogin extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session= request.getSession();
-		String usuario= request.getParameter("usuario");
-		String clave= request.getParameter("clave");
+		// TODO Auto-generated method stub
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
 		
-		if (usuario.equals("admin")&& clave.equals("cuenca")) {
+		String correo= request.getParameter("correo");
+		String contrasena=request.getParameter("contrasena");
+		
+		DAOUsuario usuarioDao = PatronDAO.getPatronDAO().getUsuarioDAO();
+		Usuario usuario = usuarioDao.buscarCorreo(correo,contrasena);
+		
+		try {
+			String act = request.getParameter("action");
+			if(act.equals("Iniciar Sesion")) {
+				
+				if(usuario != null) {
+					request.getSession().setAttribute("correo",correo);
+					response.sendRedirect("usuario_menu.html");
+					//response.sendRedirect("listaTelefono.jsp");
+				}else {
+					request.setAttribute("error", "Aun no te has Registrado");
+					response.sendRedirect("loginSesion.jsp");
+				}
+			}else if(act.equals("Registrarme")) {
+				response.sendRedirect("/HTMLs/crear_usuario.html");
+			}
 			
-			session.setAttribute("usuario", usuario);
-			session.setAttribute("clave", clave);
-			RequestDispatcher dispacher = getServletContext().getRequestDispatcher("/loginAdministrador.html");
-			dispacher.forward(request, response);
-			
-		}else {
-			RequestDispatcher dispacher = getServletContext().getRequestDispatcher("/index.html");
-			dispacher.forward(request, response);
+		} catch (Exception e) {
+			// TODO: handle exception
+			out.println("error aqui: "+e );
 		}
 	}
+
 
 }

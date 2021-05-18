@@ -7,13 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import ec.edu.ups.dao.PatronDAO;
-import ec.edu.ups.dao.UsuarioDAO;
+import ec.edu.ups.dao.DAOUsuario;
 import ec.edu.ups.pojo.Usuario;
 
 @WebServlet("/ControladorCrearUsuario")
 public class ControladorCrearUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UsuarioDAO usuarioDAO;
+	private DAOUsuario usuarioDAO;
 	private Usuario usuario;
 	
 	public ControladorCrearUsuario() {
@@ -29,14 +29,13 @@ public class ControladorCrearUsuario extends HttpServlet {
 		
 		String url = null;
 		try {
-					usuario.setUsuario_codigo(Integer.valueOf(request.getParameter("usuario_codigo")));
 					usuario.setCedula(request.getParameter("cedula"));
 					usuario.setNombre(request.getParameter("nombre"));
 					usuario.setApellido(request.getParameter("apellido"));
 					usuario.setCorreo(request.getParameter("correo"));
 					usuario.setContrasena(request.getParameter("contrasena"));
 			usuarioDAO.create(usuario);
-			url= "/loginAdministrador.html";
+			url= "/usuario_menu.html";
 		}catch(Exception e) {
 			url= "/JSPs/error.jsp";
 		}

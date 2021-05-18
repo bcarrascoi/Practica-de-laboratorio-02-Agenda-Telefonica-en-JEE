@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>GestiÃ³n de Telefonos</title>
+    <title>FORMULARIO BUSCAR TELÉFONO</title>
+      <link href="/AgendaTelefonica/css/estilo2.css" rel="stylesheet" />
 </head>
+
 <body>
-	<h1>Buscar Telefono</h1>
-	<form action="/AgendaTelefonica/ControladorBuscarTelefono" method="post">
-		<label for="codigo">Codigo: </label>
-		<input type="text" name="codigo" placeholder="ingrese el codigo.."/>
-		<br/>
-						
-		<input type="submit" value="Buscar"/>
-		<input type="reset" value="Cancelar"/>
-	</form>
-	
+    <main>
+        <div class="contact-form">
+            <div class="form-header">
+                <h1>BUSCAR TELÉFONO</h1>
+            </div>
+
+            <form action="/AgendaTelefonica/ControladorBuscarTelefono" method="post">
+             <div class="row">
+                    <div class="label">
+                        Número de Teléfono
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="numeroTel" maxlength="10" class="input-txt" placeholder="Ingrese el número de teléfono" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+               
+                <hr />
+                <button class="submit-btn" type="submit" value="Buscar">Buscar Teléfono</button>
+            </form>
+        </div>
+    </main>
 </body>
+
 </html>

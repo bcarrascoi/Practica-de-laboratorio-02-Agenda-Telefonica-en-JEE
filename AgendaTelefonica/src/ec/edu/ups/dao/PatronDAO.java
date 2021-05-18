@@ -10,8 +10,8 @@ public abstract class PatronDAO {
 	
 	public abstract void createTables();
 	
-	public abstract UsuarioDAO getUsuarioDAO();
+	public abstract DAOUsuario getUsuarioDAO();
 	
-	public abstract TelefonoDAO getTelefonoDAO();
+	public abstract DAOTelefono getTelefonoDAO();
 
 }

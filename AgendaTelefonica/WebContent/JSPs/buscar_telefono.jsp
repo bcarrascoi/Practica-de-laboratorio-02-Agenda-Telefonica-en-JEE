@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Telefono Encontrado</title>
+<title>BUSCAR TELEFONO</title>
 </head>
 <body>
 	<c:set var="t" scope="request" value="${telefono}" />

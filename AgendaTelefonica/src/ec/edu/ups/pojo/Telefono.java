@@ -10,18 +10,18 @@ public class Telefono implements Serializable {
 	private String numeroTel;
 	private String tipo;
 	private String operadora;
-	private int usuario_id;
+	private Usuario usuario;
 	
 	public Telefono() {
 		
 	}
-
-	public Telefono(int codigo, String numeroTel, String tipo, String operadora, int usuario_id) {
+	public Telefono(int codigo, String numeroTel, String tipo, String operadora, Usuario usuario) {
+		super();
 		this.setCodigo(codigo);
 		this.setNumeroTel(numeroTel);
 		this.setTipo(tipo);
 		this.setOperadora(operadora);
-		this.setUsuario_id(usuario_id);
+		this.setUsuario(usuario);
 	}
 
 	public int getCodigo() {
@@ -55,17 +55,19 @@ public class Telefono implements Serializable {
 	public void setOperadora(String operadora) {
 		this.operadora = operadora;
 	}
-	public int getUsuario_id() {
-		return usuario_id;
+	
+	public Usuario getUsuario() {
+		return usuario;
 	}
-	public void setUsuario_id(int usuario_id) {
-		this.usuario_id = usuario_id;
+	
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 	@Override
 	public String toString() {
 		return "Telefono [codigo=" + codigo + ", numeroTel=" + numeroTel + ", tipo=" + tipo + ", operadora=" + operadora
-				+ ", usuario_id=" + usuario_id + "]";
+				+ ", usuario=" + usuario + "]";
 	}
 	
 	

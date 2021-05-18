@@ -25,9 +25,9 @@ public class Conexion {
 			this.statement = connection.createStatement();
 			System.out.println("OK ");
 		} catch (ClassNotFoundException e) {
-			System.out.println(">>>WARNING (JDBC:connect)...problemas con el driver\n" + e.getMessage());
+			System.out.println("Existe problemas con el DRIVER \n" + e.getMessage());
 		} catch (SQLException e) {
-			System.out.println(">>>WARNING (JDBC:connect)...problemas con la BD\n" + e.getMessage());
+			System.out.println("Existe problemas con la Base de Datos \n" + e.getMessage());
 		}
 	}
 
@@ -35,7 +35,7 @@ public class Conexion {
 		try {
 			return this.statement.executeQuery(sql);
 		} catch (SQLException e) {
-			System.out.println(">>>WARNING (JDBC:query): ---" + sql + "---" + e);
+			System.out.println("Error de sentencia " + sql + "---" + e);
 		}
 		return null;
 	}
@@ -45,7 +45,7 @@ public class Conexion {
 			this.statement.executeUpdate(sql);
 			return true;
 		} catch (SQLException e) {
-			System.out.println(">>>WARNING (JDBC:update)... actualizacion: ---" + sql + "---" + e);
+			System.out.println("Error al actualizar los datos de la base" + sql + "---" + e);
 			return false;
 		}
 	}

@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>USUARIO ENCONTRADO</title>
+<title> LISTA DE USUARIOS </title>
 </head>
 <body>
 	<c:set var="lista" scope="request" value="${usuarios}" />
@@ -14,9 +14,7 @@
 
 	<table>
 		<tr>
-		<td><strong>Codigo</strong></td>
-		
-			<td><strong>ID</strong></td>
+		<td>
 			<td><strong>Cedula</strong></td>
 			<td><strong>Nombre</strong></td>
 			<td><strong>Apellido</strong></td>
@@ -25,7 +23,6 @@
 		</tr>
 		<c:forEach var="u" items="${lista}">
 			<tr>
-			<td>${u.usuario_codigo}</td>
 				<td>${u.cedula}</td>
 				<td>${u.nombre}</td>
 				<td>${u.apellido}</td>
@@ -34,7 +31,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="/AgendaTelefonica/loginAdministrador.html">Regresar al index</a>
+	<a href="/AgendaTelefonica/admin_menu.html">Regresar al menú</a>
 
 </body>
 </html>

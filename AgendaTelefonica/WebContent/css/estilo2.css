@@ -1,0 +1,96 @@
+@charset "ISO-8859-1";
+/*
+Note:
+- This is not a responsive style of coding
+- 
+*/
+
+/* Common - Start*/
+.clear {
+  clear: both;
+}
+
+.input-one {
+  width: 376px;
+}
+
+.input-three {
+  width: 110px;
+}
+
+/* Common -End*/
+
+body {
+  margin: 50px 120px;
+  color: white;
+  font-family: sans-serif;
+  background: rgba(5, 153, 203, 1);
+  background: -moz-linear-gradient(45deg, rgba(5, 153, 203, 1) 0%, rgba(79, 182, 193, 1) 64%, rgba(114, 195, 188, 1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(5, 153, 203, 1)), color-stop(64%, rgba(79, 182, 193, 1)), color-stop(100%, rgba(114, 195, 188, 1)));
+  background: -webkit-linear-gradient(45deg, rgba(5, 153, 203, 1) 0%, rgba(79, 182, 193, 1) 64%, rgba(114, 195, 188, 1) 100%);
+  background: -o-linear-gradient(45deg, rgba(5, 153, 203, 1) 0%, rgba(79, 182, 193, 1) 64%, rgba(114, 195, 188, 1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(5, 153, 203, 1) 0%, rgba(79, 182, 193, 1) 64%, rgba(114, 195, 188, 1) 100%);
+  background: linear-gradient(45deg, rgba(5, 153, 203, 1) 0%, rgba(79, 182, 193, 1) 64%, rgba(114, 195, 188, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0599cb', endColorstr='#72c3bc', GradientType=1);
+}
+
+.contact-form {
+  width: 530px;
+}
+
+.contact-form h1,
+.contact-form p {
+  margin: 15px 0;
+}
+
+.form-header {
+  margin-bottom: 50px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.row .label {
+  width: 152px;
+  float: left;
+}
+
+.row .inputs {
+  width: 376px;
+  float: right;
+}
+
+.input-txt,
+.input-sel,
+.input-txt-area {
+  outline: none;
+  padding: 8px;
+  border-radius: 2px;
+  background: white;
+  border: none;
+}
+
+.input-txt-area {
+  height: 100px;
+}
+
+.row .inputs .input-three:not(:first-child) {
+  margin-left: 18px;
+}
+
+.contact-form .submit-btn {
+  padding: 10px;
+  width: 130px;
+  background-color: #14a1c9;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+  border-radius: 2px;
+  margin-top: 20px;
+}
+
+/* Improvise development out from given template */
+.contact-form .submit-btn:hover {
+  background-color: #038fbd;
+}

@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ec.edu.ups.dao.PatronDAO;
-import ec.edu.ups.dao.UsuarioDAO;
+import ec.edu.ups.dao.DAOUsuario;
 import ec.edu.ups.pojo.Usuario;
 
 
 @WebServlet("/ControladorActualizarUsuario")
 public class ControladorActualizarUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UsuarioDAO usuarioDAO;
+	private DAOUsuario usuarioDAO;
 	private Usuario usuario;
        
     public ControladorActualizarUsuario() {
@@ -31,16 +31,15 @@ public class ControladorActualizarUsuario extends HttpServlet {
 		String url = null;
 		
 		try {
-			usuario.setUsuario_codigo(Integer.valueOf(request.getParameter("usuario_codigo")));
 			usuario.setCedula(request.getParameter("cedula"));
 			usuario.setNombre(request.getParameter("nombre"));
 			usuario.setApellido(request.getParameter("apellido"));
 			usuario.setCorreo(request.getParameter("correo"));
 			usuario.setContrasena(request.getParameter("contrasena"));
 			usuarioDAO.update(usuario);
-			url="/loginAdministrador.html";
+			url="/admin_menu.html";
 		}catch(Exception e) {
-			url = "/JSPs/error.jsp";
+			url = "/JSPs/error_admin.jsp";
 		}
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}

@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html>
+        <meta charset="utf-8" />
 <head>
-<meta charset="UTF-8">
-<title> GESTION USUARIO </title>
+    <title>FORMULARIO CREAR USUARIO</title>
+      <link href="/AgendaTelefonica/css/estilo2.css" rel="stylesheet" />
 </head>
+
 <body>
-	<h1> CREAR USUARIO </h1>
-	<form action="/AgendaTelefonica/ControladorCrearUsuario" method="post">
-		
-		<label for="usuario_codigo">ID: </label>
-		<input type="text" name="usuario_codigo" placeholder="ingrese el id..."/>
-		<br/>
-		
-		<label for="cedula">Cedula: </label>
-		<input type="text" name="cedula" placeholder="ingrese la cedula..."/>
-		<br/>
-		
-		<label for="nombre">Nombre: </label>
-		<input type="text" name="nombre" placeholder="ingrese el nombre..."/>			
-		<br/>
-		
-		<label for="apellido">Apellido: </label>
-		<input type="text" name="apellido" placeholder="ingrese el apellido..."/>
-		<br/>
-		
-		<label for="correo">Correo: </label>
-		<input type="text" name="correo" placeholder="ingrese el correo..."/>
-		<br/>
-		
-		<label for="contrasena">Contrasena: </label>
-		<input type="password" name="contrasena" placeholder="ingrese la contrasena..."/>
-		<br/>
-		
-		<input type="submit" value="Aceptar"/>
-		<input type="reset" value="Cancelar"/>
-	</form>
-	
+    <main>
+        <div class="contact-form">
+            <div class="form-header">
+                <h1>REGISTRO DE USUARIO</h1>
+            </div>
+
+            <form action="/AgendaTelefonica/ControladorCrearUsuario" method="post">
+             <div class="row">
+                    <div class="label">
+                        Cédula
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="cedula" maxlength="10" class="input-txt" placeholder="Ingrese su cédula" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        Nombre
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="nombre" class="input-txt" placeholder="Ingrese su nombre" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        Apellido
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="apellido" class="input-txt" placeholder="Ingrese su apellido" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="row">
+                    <div class="label">
+                        Correo
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="correo" class="input-txt input-one" placeholder="ingrese su correo" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+				 <div class="row">
+                    <div class="label">
+                        Contraseña
+                    </div>
+                    <div class="inputs">
+                        <input type="password" name="contrasena" class="input-txt" placeholder="Ingrese su contraseña" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+                <hr />
+                <button class="submit-btn" type="submit" value="Aceptar">Registrar Usuario</button>
+            </form>
+        </div>
+    </main>
 </body>
+
 </html>

@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ec.edu.ups.dao.PatronDAO;
-import ec.edu.ups.dao.TelefonoDAO;
+import ec.edu.ups.dao.DAOTelefono;
 
 @WebServlet("/ControladorCrearTablaTelefono")
 public class ControladorCrearTablaTelefono extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private TelefonoDAO telefonoDAO;
+    private DAOTelefono telefonoDAO;
     
     public ControladorCrearTablaTelefono() {
     	telefonoDAO = PatronDAO.getPatronDAO().getTelefonoDAO();

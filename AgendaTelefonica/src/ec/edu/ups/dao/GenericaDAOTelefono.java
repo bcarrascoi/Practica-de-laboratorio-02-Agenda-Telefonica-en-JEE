@@ -6,14 +6,14 @@ public interface GenericaDAOTelefono <T, ID> {
 
 	public void createTable();
 
-	public void create(T entity);
-
+	public void create(T entity, String cedula);
+	//public void create(T entity);
 	public T read(Integer id);
 
 	public void update(T entity);
 
 	public void delete(T entity);
 
-	public List<T> find();
+	public List<T> listar(String tel);
 	
 }

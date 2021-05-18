@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
 <meta charset="UTF-8">
-<title>Gestión de Usuarios</title>
+<head>
+    <title>FORMULARIO ELIMINAR USUARIO</title>
+      <link href="/AgendaTelefonica/css/estilo2.css" rel="stylesheet" />
 </head>
+
 <body>
-	<h1>Eliminar Usuario</h1>
-	<form action="/AgendaTelefonica/ControladorEliminarUsuario" method="post">
-		<label for="cedula">Cedula: </label>
-		<input type="text" name="cedula" placeholder="ingrese su cedula.."/>
-		<br/>
-		
-		<input type="submit" value="Eliminar"/>
-		<input type="reset" value="Cancelar"/>
-	</form>
-	
+    <main>
+        <div class="contact-form">
+            <div class="form-header">
+                <h1>ELIMINAR USUARIO</h1>
+            </div>
+
+            <form action="/AgendaTelefonica/ControladorEliminarUsuario" method="post">
+             <div class="row">
+                    <div class="label">
+                        Número de Cédula
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="cedula" maxlength="10" class="input-txt" placeholder="Ingrese el número de cédula" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+               
+                <hr />
+                <button class="submit-btn" type="submit" value="Eliminar">Eliminar Usuario</button>
+            </form>
+        </div>
+    </main>
 </body>
+
 </html>

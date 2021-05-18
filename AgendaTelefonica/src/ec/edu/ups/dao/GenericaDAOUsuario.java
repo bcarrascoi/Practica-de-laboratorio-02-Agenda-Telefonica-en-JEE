@@ -2,7 +2,7 @@ package ec.edu.ups.dao;
 
 import java.util.List;
 
-public interface GenericaDAOUsuario <T, ID> {
+public interface GenericaDAOUsuario <T, cedula> {
 
 	public void createTable();
 	
@@ -10,9 +10,11 @@ public interface GenericaDAOUsuario <T, ID> {
 	
 	public T read(String cedula);
 	
+	public T buscarCorreo(String correo, String contrasena);
+	
 	public void update(T entity);
 	
 	public void delete(T entity);
 	
-	public List<T> find();
+	public List<T> find(String cedula);
 }

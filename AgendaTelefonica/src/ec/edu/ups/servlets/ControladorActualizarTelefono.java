@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ec.edu.ups.dao.PatronDAO;
-import ec.edu.ups.dao.TelefonoDAO;
+import ec.edu.ups.dao.DAOTelefono;
 import ec.edu.ups.pojo.Telefono;
 
 @WebServlet("/ControladorActualizarTelefono")
 public class ControladorActualizarTelefono extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private TelefonoDAO telefonoDAO;
+    private DAOTelefono telefonoDAO;
     private Telefono telefono;
 	
     public ControladorActualizarTelefono() {
@@ -34,7 +34,7 @@ public class ControladorActualizarTelefono extends HttpServlet {
 			telefono.setTipo(request.getParameter("tipo"));
 			telefono.setOperadora(request.getParameter("operadora"));
 			telefonoDAO.update(telefono);
-			url= "/index.html";		
+			url= "/usuario_menu.html";		
 			
 		}catch(Exception e) {
 			url = "/JSPs/error.jsp";

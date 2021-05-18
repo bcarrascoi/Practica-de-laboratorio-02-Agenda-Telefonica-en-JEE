@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>TELEFONO ENCONTRADO</title>
+<title>LISTA DE TELEFONOS</title>
 </head>
 <body>
 	<c:set var="lista" scope="request" value="${telefono}" />
@@ -32,7 +32,7 @@
 		</c:forEach>
 		
 	</table>
-	<a href="/AgendaTelefonica/index.html">Regresar al index</a>
+	<a href="/AgendaTelefonica/usuario_menu.html">Regresar al menú Usuario</a>
 
 </body>
 </html>

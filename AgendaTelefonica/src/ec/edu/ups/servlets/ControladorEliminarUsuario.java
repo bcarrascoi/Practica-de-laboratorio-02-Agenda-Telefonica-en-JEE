@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ec.edu.ups.dao.PatronDAO;
-import ec.edu.ups.dao.UsuarioDAO;
+import ec.edu.ups.dao.DAOUsuario;
 import ec.edu.ups.pojo.Usuario;
 
 @WebServlet("/ControladorEliminarUsuario")
 public class ControladorEliminarUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private UsuarioDAO usuarioDAO;
+    private DAOUsuario usuarioDAO;
     private Usuario usuario;
     
     public ControladorEliminarUsuario() {
@@ -33,9 +33,9 @@ public class ControladorEliminarUsuario extends HttpServlet {
 		try {
 			usuario.setCedula(request.getParameter("cedula"));
 			usuarioDAO.delete(usuario);
-			url= "/loginAdministrador.html";
+			url= "/admin_menu.html";
 		}catch(Exception e) {
-			url = "/JSPs/error.jsp";
+			url = "/JSPs/error_admin.jsp";
 		}
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
