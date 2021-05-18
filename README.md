@@ -17,11 +17,14 @@ a)	Los usuarios pueden registrarse en la aplicación a través de un formulario 
 
 •	Index.html
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118661644-ef329d00-b7b4-11eb-964e-cdba094ab12c.png)
 
 
 •	Login
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118661874-2739e000-b7b5-11eb-9555-8680398bf45a.png)
 
 •	Para la creación del Login, en Eclipse se creó un Servlet llamado  ControladorLogin.java y un filtro llamado Filtro IniciarSesion.java
@@ -30,6 +33,7 @@ a)	Los usuarios pueden registrarse en la aplicación a través de un formulario 
 -	ControladorLogin.java
 
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118661916-31f47500-b7b5-11eb-9d9b-644c7f7c57a0.png)
 
 -	FiltroIniciarSesión
@@ -51,6 +55,7 @@ a)	Los usuarios pueden registrarse en la aplicación a través de un formulario 
 
 
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118662017-49336280-b7b5-11eb-980a-b337f836e652.png)
 
 
@@ -66,7 +71,9 @@ a)	Los usuarios pueden registrarse en la aplicación a través de un formulario 
 -	Una vez iniciado sesión se mostrará la siguiente página que contendrá el menú de usuario.
 
 •	Usuario_menu.html
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118662076-56e8e800-b7b5-11eb-93cc-f4749d8d7efb.png)
 
 
@@ -75,6 +82,7 @@ a)	Los usuarios pueden registrarse en la aplicación a través de un formulario 
 -	Crear Teléfono
 
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118662127-623c1380-b7b5-11eb-9805-8b49457959ab.png)
 
 
@@ -86,7 +94,9 @@ a)	Los usuarios pueden registrarse en la aplicación a través de un formulario 
 
 
 •	Actualizar Teléfono
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118662224-76801080-b7b5-11eb-88d6-c19603f196e4.png)
 
 
@@ -112,11 +122,13 @@ a)	Los usuarios pueden registrarse en la aplicación a través de un formulario 
 •	Buscar_telefono.jsp
 
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118662381-90b9ee80-b7b5-11eb-8f3b-5d955139d2e1.png)
 
 
 
 -	En donde para la búsqueda de los datos del teléfono se creó un Servlet llamado ControladorBuscarTelefono.java
+
 <br>
 
 ![image](https://user-images.githubusercontent.com/56461202/118662409-96afcf80-b7b5-11eb-9056-8439b71538bb.png)
@@ -124,18 +136,22 @@ a)	Los usuarios pueden registrarse en la aplicación a través de un formulario 
 
 
 •	Eliminar Telefono
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118662445-9dd6dd80-b7b5-11eb-82d9-ae8a56cb165a.png)
 
 
 -	En donde para la eliminación de los datos del teléfono se creó un Servlet llamado ControladorEliminarTelefono.java
 
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118662487-a8917280-b7b5-11eb-8ce9-bc96c35e83a8.png)
 
 
 •	Listar Telefono
 <br>
+
 ![image](https://user-images.githubusercontent.com/56461202/118662543-b34c0780-b7b5-11eb-9ce2-df624019de9e.png)
 
  
